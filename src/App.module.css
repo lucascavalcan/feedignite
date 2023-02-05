@@ -1,0 +1,23 @@
+.wrapper {
+    width: 100%;
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    /*como eu utilizei rem, eu posso redimencionar os lementos, apenas modificando a font html (por padrão 1rem = 16px), vejamos: */
+    html {
+        font-size: 87.5%; /*isso quer dizer que, no mobile, a fonte equivale a 87,5% do tamanho da fonte na versão web */
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;    
+    }
+}
